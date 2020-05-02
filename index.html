@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+  <script src="lib/codemirror.js"></script>
+  <link rel="stylesheet" href="lib/codemirror.css">
+  <script src="mode/xml/xml.js"></script>
+  <link rel="stylesheet" href="./theme/ambiance.css">
+  <script src="./template.js"></script>
+
+  <style>
+    body {
+    	background-color: #eee;
+    }
+  </style>
+</head>
+  <body>
+  <div id="codeeditor"></div>
+  <button type="button" name="button">Click</button>
+  <script>
+    var editor = CodeMirror(document.getElementById("codeeditor"), {
+      value: template,
+      mode : "xml",
+      htmlMode: true,
+      theme: "ambiance",
+    });
+    const button = document.getElementsByTagName('button')[0];
+    button.onclick = function() {
+        console.log(editor.getValue());
+    };
+  </script>
+</body>
+</html>
