@@ -1,0 +1,553 @@
+<html>
+  <head>
+    <title>Professional Resume</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+    <script src="mode/javascript/javascript.js"></script>
+    <style>
+      html {
+        background-color: black;
+      }
+      body {
+        background-color: #ECEFF1;
+        font-family: 'Lato', sans-serif;
+        width: 210mm;
+        height: 297mm;
+        color: #303030;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .section-left {
+        width: 35%;
+        float: left;
+        height: 100%;
+        background-color: #303030;
+        color: #fff;
+        text-align: center;
+      }
+      .section-left .section {
+        margin-top: 10px;
+        padding: 1rem;
+      }
+      .section-left .section .logo {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      .intro hr {
+        width: 4rem;
+        display: block;
+        height: 2px;
+        border: 0px;
+        border-top: 2px solid;
+        margin-top: 15px;
+      }
+      .intro .content {
+        margin-bottom: 20px;
+      }
+      .section-left .title {
+        font-size: 1.1rem;
+        text-align: center;
+        padding: .25rem 0px;
+      }
+      .section-left .subtitle {
+        font-weight: lighter;
+        font-size: 14px;
+      }
+      .contact-section {
+        margin-top: 20px;
+        font-size: 12px;
+        text-align: left;
+      }
+      .contact-section div {
+        padding-bottom: 6px;
+      }
+      #section-right {
+        width: 65%;
+        float: right;
+      }
+      #section-right .section {
+        margin-bottom: 1rem;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 1px 1px 2px #AAA;
+        border-radius: 5px;
+      }
+
+      #section-right .section#presentation p {
+        font-size: .75rem;
+      }
+      #section-right .section#experience .content li,
+      #section-right .section#experience p {
+        font-size: .725rem;;
+      }
+
+      #section-right .section#experience ul {
+        font-size: .8rem;
+        list-style-position: outside;
+        list-style-type: none;
+        padding-left: 0px;
+        margin-bottom: 0px;
+      }
+
+      #section-right .section#experience .content li {
+        margin-bottom: 6px;
+      }
+
+
+      #section-right .section#education .title {
+        margin-bottom: .5rem;
+      }
+
+      #section-right .section#education .content {
+        width: 50%;
+      }
+
+      #section-right .section#education .content-image-container {
+        width: 50%;
+        margin-top: 0px;
+        align-self: center;
+      }
+
+      #section-right .section#education .content:nth-child(2) {
+        padding-left: 1rem;
+        border-left: 1px solid rgba(0, 0, 0, .1);
+      }
+
+      #section-right .section#education ul {
+        padding: 0px 0px 0px 45px;
+        list-style-position: inside;
+      }
+
+      #section-right .section#education li {
+        font-size: .7rem;
+      }
+
+      .content-title-container p {
+        font-size: .75rem;
+        margin: 0px;
+      }
+
+      .wrapper {
+        padding: 1rem;
+      }
+      .fa {
+        margin-right: 15px;
+      }
+      .wrapper .title {
+        color: #fc7a70;
+        font-size: 1.3rem;
+        letter-spacing: 0.1rem;
+        line-height: 26px;
+        padding-bottom: 8px;
+        font-weight: bold;
+        border-bottom: 2px solid #f2f2f2;
+      }
+      a:link {
+        color: #fff;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #fff;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+      a:active {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      h1 {
+        margin: 12px 0px;
+      }
+
+      h2 {
+        font-size: .8rem;
+        margin: 6px 0px;
+      }
+      h3 {
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: -5px;
+      }
+
+      .profile-pic {
+        border-radius: 250px;
+        max-height: 170px;
+      }
+      .programming {
+        text-align: left;
+        font-size: 13px
+      }
+
+      .programming ul {
+        margin: .5rem;
+        padding-left: 10px ;
+      }
+
+      .programming li {
+        margin-bottom: .75rem;
+      }
+
+    .language {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-top: 4px
+    }
+
+    .language .title, 
+    .language .level {
+        font-size: 13px;
+        width: 50px;
+        margin: 0px;
+        text-align: left;
+    }
+
+    .language .title{
+      margin-right: 12px;
+    }
+
+    .language .level {
+        margin-left: 12px;
+    }
+
+      .progressBar-container {
+        width: 110px;
+        height: 13px;
+        background-color: grey;
+        margin: 7px 0px;
+      }
+
+      .progress {
+        height: 100%;
+        background-color: #fc7a70;
+      }
+
+      .progress#FR {
+        width: 100%;
+      }
+      .progress#EN {
+        width: 85%;
+      }
+      .progress#SE {
+        width: 70%;
+      }
+      .progress#IT {
+        width: 50%;
+      }
+      .progress#DE {
+        width:40%;
+      }
+      .content-text {
+        display: inline-block;
+        width: 90%;
+        font-size: 13px;
+      }
+
+      .content-image-container {
+        display: inline-flex;
+        vertical-align: top;
+        width: 9%;
+        padding-top: .25rem;
+      }
+      .content-image {
+        vertical-align: top;
+        max-width: 100%;
+        max-height: 35px;
+        border-radius:2px;
+      }
+
+      .certificate-section ul {
+        padding-left: 0px;
+      }
+
+      .certificate-section li {
+        list-style: none;
+        text-align: left;
+        font-size: .85rem;
+        line-height: 1.5rem;
+      }
+    </style>
+    <script type="text/javascript">
+    var myCodeMirror = CodeMirror(document.body, {
+  value: "function myScript(){return 100;}\n",
+  mode:  "javascript"
+  });
+
+    </script>
+  </head>
+
+  <body class="A4">
+    <div class="section-left">
+      <div class="section intro">
+        <img class="profile-pic" src="https://media-exp1.licdn.com/dms/image/C5603AQHIusrLoBMCZw/profile-displayphoto-shrink_200_200/0?e=1593043200&v=beta&t=-jH75lu5E4KPL9D5QXHSd4puRh3_oAYUPYMWWwTOtBc" alt="ProfilePic">
+
+        <h1>Paul Bricout</h1>
+        <div class="content">
+          <span class="title">Fullstack Developer</span> <br>
+          <span class="subtitle">ReactJS / React Native / NodeJS <br/> Typescript</span>
+        </div>
+        <hr>
+        <div class="contact-section">
+          <div class="phone">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span class="num">+33 6 78 71 68 14</span>
+          </div>
+          <div class="email">
+            <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+            <a href="mailto:paulbricout2@gmail.com">paulbricout2@gmail.com</a>
+          </div>
+          <div class="web">
+            <i class="fa fa-link" aria-hidden="true"></i>
+            <a href="https://brumor.github.io/portfolio/">https://brumor.github.io/portfolio/</a>
+          </div>
+          <div class="linkedin">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <a href="https://www.linkedin.com/in/paul-bricout-428974104/">Paul Bricout</a>
+          </div>
+        </div>
+        <hr>
+        <div class="programming">
+          <div class="title">
+            <i class="fa fa-terminal" aria-hidden="true"></i>
+            <span class="num">Programming</span>
+          </div>
+            <ul>
+              <li><u>Mobile:</u> React Native, Java for Android</li>
+              <li><u>Front-end:</u> React.js, Gatsby, GraphQL HTML, CSS, SASS, Typescript, Javascript, Material Design, PUG Template, Bootstrap</li>
+              <li><u>Back-end:</u> NodeJS, Express, Flask (Python), Kafka</li>
+              <li><u>Other:</u> MySQL, PostgreSQL, SQLite, Unity</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="language-section">
+          <div class="title">
+            <i class="fa fa-language" aria-hidden="true"></i>
+            <span class="num">Languages</span>
+          </div>
+          <div class="language">
+            <p class="title">French</p>
+            <div class="progressBar-container">
+              <div id="FR" class="progress"></div>
+            </div>
+            <p class="level">Native</p>
+          </div>
+          <div class="language">
+            <p class="title">English</p>
+            <div class="progressBar-container">
+              <div id="EN" class="progress"></div>
+            </div>
+            <p class="level">C1</p>
+          </div>
+          <div class="language">
+            <p class="title">Swedish</p>
+            <div class="progressBar-container">
+              <div id="SE" class="progress"></div>
+            </div>
+            <p class="level">B2</p>
+          </div>
+          <div class="language">
+            <p class="title">Italian</p>
+            <div class="progressBar-container">
+              <div id="IT" class="progress"></div>
+            </div>
+            <p class="level">B1</p>
+          </div>
+          <div class="language">
+            <p class="title">German</p>
+            <div class="progressBar-container">
+              <div id="DE" class="progress"></div>
+            </div>
+            <p class="level">B1</p>
+          </div>
+        </div>
+        <hr>
+        <div class="certificate-section">
+          <div class="title">
+            <i class="fa fa-certificate" aria-hidden="true"></i>
+            <span class="num">Certificates</span>
+          </div>
+          <ul>
+            <li>TOEFL: 985 / TOEIC: 101</li>
+            <li>React Native and Redux - Udemy</li>
+            <li>Advanced CSS and Sass - Udemy</li>
+            <li>Machine Learning - Coursera</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="section-right">
+      <div class="wrapper">
+        <div class="section" id="presentation">
+          <div class="title">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            Profile
+          </div>
+          <p>
+            Self-taught developer and business graduate with experience in both the programming and the management field. I have a passion for new technologies and building things in the digital world.
+            I have work-experience in different fields, including <b>finance</b> and <b>retail</b>, and I am able to easily fit into new cultures.
+          </p>
+        </div>
+
+        <div class="section" id="experience">
+          <div class="title">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+            Experience
+          </div>
+          
+          <div class="content">
+            <div class="content-image-container">
+              <img  class="content-image" src="https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/b8/e1/d3/b8e1d305-8460-939e-3f1c-e265453bef58/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-85-220.png/400x400.png" alt="">
+            </div>
+            <div class="content-text">
+              <h2>Frontend/Mobile Developer</h2>
+              <h3>Rocker (Bynk AB) | September 2019 - Now | Stockholm, Sweden</h3>
+              <ul>
+                <li>
+                  Worked on bringing life to Rocker (app/web) and making it one of the most downloaded apps in Sweden:
+                </li>
+                <li>
+                  <u>Mobile:</u>
+                  I redesigned the whole app multiples times using React Native, worked and deployed new features for thousands of users, such as invoice payment, card features, budgeting and special offers.
+                  I helped building a new design language and creating shared components.
+                </li>
+                <li>
+                  <u>Frontend:</u> I redesigned our main website from Bynk to Rocker using Gatsby, React, GraphQL and CSS, and added new features such as interest rate negociations. 
+                  I worked on the flow for a checkout solution using Typescript and Sass. 
+                </li>
+                <li>
+                  <u>Backend:</u> I created a service in NodeJS using Kafka and PUG templates to design and print invoices to Rocker Pay Customers.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="content-image-container">
+              <img  class="content-image" src="https://habrastorage.org/getpro/moikrug/uploads/company/100/005/778/0/logo/medium_0d888f044bf1b566236e95590ca1b033.png" alt="">
+            </div>
+            <div class="content-text">
+              <h2>Software Developer Intern (Omnichannel)</h2>
+              <h3>Factorymarket | January 2019 - June 2019 | Berlin, Germany</h3>
+              <ul>
+                <li>
+                  Created analytic tools for the marketing team and our workers in the stores. 
+                  Improved the customer journey inside our shops by creating a system of QR codes leading to a web page with details on our products.
+                </li>
+                <li><u>Fullstack Web Development:</u> React.js, NodeJS, ExpressJS, JQuery</li>
+                <li><u>Mobile Development:</u> React Native</li>
+                <li><u>Data Science:</u> MySQL, PostgreSQL, Redash, Google Script, Google Data Studio</li>
+                <li><u>Other:</u> Project Documentation, CI/CD Pipeline, Kubernetes, App Engine.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="content-image-container">
+              <img  class="content-image" src="https://cdn.onlinewebfonts.com/svg/img_242128.png" alt="">
+
+            </div>
+            <div  class="content-text">
+              <h2>Founder and Developer</h2>
+              <h3>Localears | June 2018 - November 2018 | Lyon, France</h3>
+              <p>
+                I worked on the project Streaming Platform to help Musician get visibility in their region. I designed and developed an app in React Native and a website with React and presented it to investors</p>
+              </p>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-image-container">
+              <img  class="content-image" src="https://cdn.onlinewebfonts.com/svg/img_242128.png" alt="">
+
+            </div>
+            <div  class="content-text">
+              <h2>Android Developer</h2>
+              <h3>Kargo | June 2017 - September 2017 | Lyon, France</h3>
+              <p> I developed a Mobile App for package delivery in Java for Android.</p>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-image-container">
+              <img  class="content-image" src="https://graduatefog.co.uk/wp-content/uploads/2014/03/Oxfam-150x150.jpg" alt="">
+
+            </div>
+            <div  class="content-text">
+              <h2>Assistant Finance Manager</h2>
+              <h3>Oxfam | January 2017 - April 2017 | Newcastle Upon Tyne, United Kindom</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="education">
+          <div class="title">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Education
+          </div>
+          <div class="row">
+
+            <div class="content">
+              <div class="row">
+                <div class="content-image-container">
+                  <img  class="content-image" src="https://www.underconsideration.com/brandnew/archives/linkopings_universitet_logo_detail_blue.png" alt="">
+                </div>
+                    <div class="content-title-container">
+                      <h2>Linköping Universitet</h2>
+                      <p>Exchange Semester | January 2018 - June 2018 | Linköping, Sweden</p>
+                    </div>
+              </div>
+              <div  class="content-text">
+                <ul>
+                  <li>Project Management</li>
+                  <li>Management Control</li>
+                  <li>International Management</li>
+                  <li>Enterprise System</li>
+                  <li>Swedish B1:2</li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="content">
+              <div class="row">
+                <div class="content-image-container">
+                  <img  class="content-image" src="http://intranet.inseec.com/images/inseec-bs-logo-carre.png?t=1561829157" alt="">
+                </div>
+                <div class="content-title-container">
+                  <h2>BBA INSEEC Lyon</h2>
+                  <p>Bachelor in Business Administration | September 2015 - June 2019 | Lyon, France</p>
+                </div>
+              </div>
+              <div  class="content-text">
+                <ul>
+                  <li>Project Management</li>
+                  <li>Change Management</li>
+                  <li>Digital Marketing</li>
+                  <li>Corporate Strategy</li>
+                  <li>English, German, Russian</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/monokai");
+      editor.session.setMode("ace/mode/javascript");
+  </script> -->
+  </body>
+</html>
