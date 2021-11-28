@@ -49,8 +49,8 @@
         border-top: 2px solid;
         margin-top: 15px;
       }
-      .intro .content {
-        margin-bottom: 20px;
+      .content {
+        margin-bottom: .5rem;
       }
       .section-left .title {
         font-size: 1.1rem;
@@ -86,19 +86,24 @@
       }
       #section-right .section#experience .content li,
       #section-right .section#experience p {
-        font-size: .725rem;;
+        font-size: .725rem;
+        margin-bottom: .25rem;
+      }
+
+      #section-right .section#experience .content ul {
+        list-style-type: circle;
       }
 
       #section-right .section#experience ul {
         font-size: .8rem;
-        list-style-position: outside;
         list-style-type: none;
-        padding-left: 0px;
+        padding-left: .5rem;
+        margin-top: 0px;
         margin-bottom: 0px;
       }
 
       #section-right .section#experience .content li {
-        margin-bottom: 6px;
+        margin-bottom: .1rem;
       }
 
 
@@ -113,7 +118,6 @@
       #section-right .section#education .content-image-container {
         width: 50%;
         margin-top: 0px;
-        align-self: center;
       }
 
       #section-right .section#education .content:nth-child(2) {
@@ -185,6 +189,7 @@
       .profile-pic {
         border-radius: 250px;
         max-height: 170px;
+        max-width: 170px;
       }
       .programming {
         text-align: left;
@@ -255,6 +260,9 @@
         width: 90%;
         font-size: 13px;
       }
+      .content-text p, .content-text li {
+        font-size: 725rem;
+      }
 
       .content-image-container {
         display: inline-flex;
@@ -292,7 +300,7 @@
   <body class="A4">
     <div class="section-left">
       <div class="section intro">
-        <img class="profile-pic" src="https://media-exp1.licdn.com/dms/image/C5603AQHIusrLoBMCZw/profile-displayphoto-shrink_200_200/0?e=1593043200&v=beta&t=-jH75lu5E4KPL9D5QXHSd4puRh3_oAYUPYMWWwTOtBc" alt="ProfilePic">
+        <img class="profile-pic" src="https://media-exp1.licdn.com/dms/image/C4E03AQEpLXziVRPPsQ/profile-displayphoto-shrink_400_400/0/1599493991039?e=1643846400&v=beta&t=ftYjVZMVOHQlJzsMhHrJmYyXvK73q8ftNx982MWHkrc" alt="ProfilePic">
 
         <h1>Paul Bricout</h1>
         <div class="content">
@@ -303,15 +311,11 @@
         <div class="contact-section">
           <div class="phone">
             <i class="fa fa-phone" aria-hidden="true"></i>
-            <span class="num">+33 6 78 71 68 14</span>
+            <span class="num">+46 7 04 32 86 87</span>
           </div>
           <div class="email">
             <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
             <a href="mailto:paulbricout2@gmail.com">paulbricout2@gmail.com</a>
-          </div>
-          <div class="web">
-            <i class="fa fa-link" aria-hidden="true"></i>
-            <a href="https://brumor.github.io/portfolio/">https://brumor.github.io/portfolio/</a>
           </div>
           <div class="linkedin">
             <i class="fa fa-linkedin" aria-hidden="true"></i>
@@ -397,8 +401,7 @@
             Profile
           </div>
           <p>
-            Self-taught developer and business graduate with experience in both the programming and the management field. I have a passion for new technologies and building things in the digital world.
-            I have work-experience in different fields, including <b>finance</b> and <b>retail</b>, and I am able to easily fit into new cultures.
+            Self-taught developer and business graduate with experience in both programming and management. I have a passion for new technologies and building things in the digital world.
           </p>
         </div>
 
@@ -410,26 +413,49 @@
           
           <div class="content">
             <div class="content-image-container">
-              <img  class="content-image" src="https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/b8/e1/d3/b8e1d305-8460-939e-3f1c-e265453bef58/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-85-220.png/400x400.png" alt="">
+              <img  class="content-image" src="data:image/png;base64,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" alt="">
+            </div>
+            <div class="content-text">
+              <h2>Senior Software Engineer (Mobile)</h2>
+              <h3>Mindler AB | September 2020 - Now | Stockholm, Sweden</h3>
+              <p>As the person responsible for the Mobile App Success, I:</p>
+              <ul>
+                <li>
+                  Successfully launched our app in two countries: France and the United Kingdom.
+                </li>
+                <li>
+                  Improved overall code quality by initiating a company-wide transition from Javascript to Typescript.
+                </li>
+                <li>
+                  Worked closely with the product, design, and data team on delivering several new features such as: save a psychologist, save credit card, interactive modules, interactivity, mindler for youth, and more. Additionally working on improving the overall design and architecture of the app through a series of smaller changes.
+                </li>
+              </ul>
+              <p>
+                With all of this combined, I contributed to Mindler’s success. Since I joined the App store rating for Mindler in Sweden went from around 3.5 to 4.8, making it one of the most downloaded medical apps and the go-to for psychology. 
+              </p>
+            </div>
+          </div>
+          
+          <div class="content">
+            <div class="content-image-container">
+              <img  class="content-image" src="https://media-exp1.licdn.com/dms/image/C4E0BAQEsYu3aySMtJA/company-logo_200_200/0/1608932380980?e=2159024400&v=beta&t=Ra55LYk-BlFqungGJF6jUbH0xx9vszZo8BLbUpp_Csk" alt="">
             </div>
             <div class="content-text">
               <h2>Frontend/Mobile Developer</h2>
-              <h3>Rocker (Bynk AB) | September 2019 - Now | Stockholm, Sweden</h3>
+              <h3>Rocker (Bynk AB) | September 2019 - September 2020 | Stockholm, Sweden</h3>
+              <p>
+                Worked on bringing life to Rocker and making it one of the most downloaded apps in Sweden:
+              </p>
               <ul>
                 <li>
-                  Worked on bringing life to Rocker (app/web) and making it one of the most downloaded apps in Sweden:
-                </li>
-                <li>
                   <u>Mobile:</u>
-                  I redesigned the whole app multiples times using React Native, worked and deployed new features for thousands of users, such as invoice payment, card features, budgeting and special offers.
-                  I helped building a new design language and creating shared components.
+                  I redesigned the whole app multiples times using React Native, building a new design language and creating shared components, worked and deployed new features for thousands of users.
                 </li>
                 <li>
-                  <u>Frontend:</u> I redesigned our main website from Bynk to Rocker using Gatsby, React, GraphQL and CSS, and added new features such as interest rate negociations. 
-                  I worked on the flow for a checkout solution using Typescript and Sass. 
+                  <u>Frontend:</u> I redesigned our main website for a rebranding using Gatsby, React, GraphQL and CSS, and added new features.
                 </li>
                 <li>
-                  <u>Backend:</u> I created a service in NodeJS using Kafka and PUG templates to design and print invoices to Rocker Pay Customers.
+                  <u>Backend:</u> I created a micro-service in NodeJS using Kafka and PUG templates to design and print invoices to Rocker Pay Customers.
                 </li>
               </ul>
             </div>
@@ -442,49 +468,37 @@
             <div class="content-text">
               <h2>Software Developer Intern (Omnichannel)</h2>
               <h3>Factorymarket | January 2019 - June 2019 | Berlin, Germany</h3>
-              <ul>
-                <li>
+              <p>
                   Created analytic tools for the marketing team and our workers in the stores. 
                   Improved the customer journey inside our shops by creating a system of QR codes leading to a web page with details on our products.
-                </li>
-                <li><u>Fullstack Web Development:</u> React.js, NodeJS, ExpressJS, JQuery</li>
-                <li><u>Mobile Development:</u> React Native</li>
-                <li><u>Data Science:</u> MySQL, PostgreSQL, Redash, Google Script, Google Data Studio</li>
-                <li><u>Other:</u> Project Documentation, CI/CD Pipeline, Kubernetes, App Engine.</li>
-              </ul>
+              </p>
             </div>
           </div>
 
           <div class="content">
             <div class="content-image-container">
               <img  class="content-image" src="https://cdn.onlinewebfonts.com/svg/img_242128.png" alt="">
-
             </div>
-            <div  class="content-text">
+            <div class="content-text">
               <h2>Founder and Developer</h2>
               <h3>Localears | June 2018 - November 2018 | Lyon, France</h3>
               <p>
-                I worked on a streaming platform project to help musicians get visibility in their region. 
-                I designed and developed an app in React Native and a website with React and successfully 
-                presented a business plan to members of an incubator, who wanted my startup to join them!</p>
+                I worked on a streaming platform project to help smaller musicians get visibility.</p>
               </p>
             </div>
           </div>
           <div class="content">
             <div class="content-image-container">
               <img  class="content-image" src="https://cdn.onlinewebfonts.com/svg/img_242128.png" alt="">
-
             </div>
             <div  class="content-text">
               <h2>Android Developer</h2>
               <h3>Kargo | June 2017 - September 2017 | Lyon, France</h3>
-              <p> I developed a Mobile App for package delivery in Java for Android.</p>
             </div>
           </div>
           <div class="content">
             <div class="content-image-container">
               <img  class="content-image" src="https://graduatefog.co.uk/wp-content/uploads/2014/03/Oxfam-150x150.jpg" alt="">
-
             </div>
             <div  class="content-text">
               <h2>Assistant Finance Manager</h2>
@@ -507,38 +521,20 @@
                 </div>
                     <div class="content-title-container">
                       <h2>Linköping Universitet</h2>
-                      <p>Exchange Semester | January 2018 - June 2018 | Linköping, Sweden</p>
+                      <p>Exchange Semester, Management Program | January 2018 - June 2018 | Linköping, Sweden</p>
                     </div>
-              </div>
-              <div  class="content-text">
-                <ul>
-                  <li>Project Management</li>
-                  <li>Management Control</li>
-                  <li>International Management</li>
-                  <li>Enterprise System</li>
-                  <li>Swedish B1:2</li>
-                </ul>
               </div>
             </div>
   
             <div class="content">
               <div class="row">
                 <div class="content-image-container">
-                  <img  class="content-image" src="http://intranet.inseec.com/images/inseec-bs-logo-carre.png?t=1561829157" alt="">
+                  <img  class="content-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.capitainestudy.fr%2Fwp-content%2Fuploads%2F2019%2F02%2Ffaecbook.png&f=1&nofb=1" alt="">
                 </div>
                 <div class="content-title-container">
                   <h2>BBA INSEEC Lyon</h2>
-                  <p>Bachelor in Business Administration | September 2015 - June 2019 | Lyon, France</p>
+                  <p>BBA, Majored in Innovation & Intrapreneurship | September 2015 - June 2019 | Lyon, France</p>
                 </div>
-              </div>
-              <div  class="content-text">
-                <ul>
-                  <li>Project Management</li>
-                  <li>Change Management</li>
-                  <li>Digital Marketing</li>
-                  <li>Corporate Strategy</li>
-                  <li>English, German, Russian</li>
-                </ul>
               </div>
             </div>
           </div>
